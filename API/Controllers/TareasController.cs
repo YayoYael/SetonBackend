@@ -6,9 +6,8 @@ using System.ComponentModel;
 
 namespace API.Controllers
 {
-    [ApiController]
-    [Route("api/[controller]")]
-    public class TareasController : ControllerBase
+  
+    public class TareasController : BaseController
     {
         private readonly AplicationDbContext _db;
 
