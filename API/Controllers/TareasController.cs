@@ -37,7 +37,7 @@ namespace API.Controllers
             };
             _db.Tareas.Add(tarea);
             await _db.SaveChangesAsync();
-            return Ok("Tarea creada con exito");
+            return Ok(tarea);
         }
     }
 }
