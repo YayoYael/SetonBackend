@@ -30,10 +30,7 @@ namespace API.Controllers
             {
                 Nombre = tareaDTO.Nombre,
                 Actividad = tareaDTO.Actividad,
-                Fecha = tareaDTO.Fecha,
-                Tiempo = tareaDTO.Tiempo,
-                HoraInicio = tareaDTO.HoraInicio,
-                HoraFin = tareaDTO.HoraFin
+                Fecha = tareaDTO.Fecha
             };
             _db.Tareas.Add(tarea);
             await _db.SaveChangesAsync();
@@ -53,9 +50,6 @@ namespace API.Controllers
             tarea.Nombre = tareaDTO.Nombre;
             tarea.Actividad = tareaDTO.Actividad;
             tarea.Fecha = tareaDTO.Fecha;
-            tarea.Tiempo = tareaDTO.Tiempo;
-            tarea.HoraInicio = tareaDTO.HoraInicio;
-            tarea.HoraFin = tareaDTO.HoraFin;
 
             await _db.SaveChangesAsync();
             return Ok(tarea);
